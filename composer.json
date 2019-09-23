@@ -1,0 +1,17 @@
+{
+    "name": "sergeysvrollun/queue-client",
+    "authors": [
+        {
+            "name": "Serhii Svintsitskyi",
+            "email": "sergeysvrollun@gmail.com"
+        }
+    ],
+    "require": {
+        "reputation-vip/queue-client": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ReputationVIP\\QueueClient\\": "src"
+        }
+    }
+}
