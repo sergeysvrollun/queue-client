@@ -12,5 +12,5 @@ $queueClient = new QueueClient($adapter);
 
 $messages = $queueClient->getMessages('testQueue');
 $message = $messages[0];
-$queueClient->deleteMessage($message);
+$queueClient->deleteMessage('testQueue', $message);
 echo $message['Body'];
