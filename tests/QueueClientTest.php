@@ -39,21 +39,13 @@ abstract class QueueClientTest extends TestCase
         unset($this->queueClient);
     }
 
-    public function testCreateQueue()
+    public function testCreateDeleteQueue()
     {
         $queueClient = $this->getQueueClient();
         $this->assertInstanceOf(
             'ReputationVIP\QueueClient\QueueClientInterface',
             $queueClient->createQueue('testQueue')
         );
-    }
-
-    /**
-     * @depends testCreateQueue
-     */
-    public function testDeleteQueue()
-    {
-        $queueClient = $this->getQueueClient();
         $this->assertInstanceOf(
             'ReputationVIP\QueueClient\QueueClientInterface',
             $queueClient->deleteQueue('testQueue')
